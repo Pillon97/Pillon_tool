@@ -11,4 +11,4 @@ bin/
 lib/
 
 # Personal Configuration and Credentials
-#config.json
+config.json
