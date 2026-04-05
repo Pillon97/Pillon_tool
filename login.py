@@ -1,10 +1,16 @@
 import hashlib
 import getpass
 import json
+import os
 
-with open("config.json") as f:
-    config = json.load(f)
 def login():
+    if not os.path.exists("config.json") or os.stat("config.json").st_size == 0:
+        print("Configuration file is missing or empty. Please run pillon.py to register.")
+        return
+
+    with open("config.json") as f:
+        config = json.load(f)
+        
     stored_username = config["username"]
     stored_password_hash = config["password"]
 

@@ -3,9 +3,17 @@ import json
 import matrix
 import os
 import login
+import hashlib
+import getpass
 
-with open("config.json") as f:
-    config = json.load(f)
+def load_config():
+    if not os.path.exists("config.json") or os.stat("config.json").st_size == 0:
+        # Return a default structure if the file doesn't exist or is empty
+        return {"installed": False, "username": "", "password": "", "tools": [], "dependencies": []}
+    with open("config.json") as f:
+        return json.load(f)
+
+config = load_config()
 
 def start():
     matrix.matrix(50)
@@ -28,11 +36,7 @@ def start():
     login.login()
 
     clear()
-    with open("config.json", "w") as f:
-        json.dump(data, f, indent=4)
-
-    #print("installed = True")
-
+    
     input("Press Enter to continue...")
     #print("Check updates...")
     #subprocess.run("apt update", shell=True, check=True)
@@ -70,7 +74,9 @@ def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
+
 def run_install(cmd):
+
     try:
         print(f"[>] {cmd}")
         subprocess.run(cmd, shell=True, check=True)
@@ -82,25 +88,36 @@ def install_deps(cmd):
         subprocess.run(cmd, shell=True, check=True)
     except subprocess.CalledProcessError:
         print(f"[-] Failed to install dependencies for: {cmd}")
-    print(f"[+] Successfully installed dependencies for: {cmd}")
-    with open("config.json", "r") as f:
-        data = json.load(f)
-    data["installed"] = True  # ← csak ezt módosítod
+def register_user():
+    username = input("Enter new username: ")
+    password = getpass.getpass("Enter new password: ")
+    username_hash = hashlib.sha256(username.encode()).hexdigest()
+    password_hash = hashlib.sha256(password.encode()).hexdigest()
+    data = load_config()
+    data["username"] = username_hash
+    data["password"] = password_hash
     with open("config.json", "w") as f:
         json.dump(data, f, indent=4)
 
-
+def installed():
+    data = load_config()
+    data["installed"] = True
+    with open("config.json", "w") as f:
+        json.dump(data, f, indent=4)
 
 if __name__ == "__main__":
     #print(config["installed"])
     if config["installed"] == False:
-        start()
+        register_user()
         for tool in config["tools"]:
             print(f"\n[+] Installing {tool['name']}")
             run_install(tool["install"])
         for dep in config["dependencies"]:
             print(f"\n[+] Installing dependency: {dep['name']}")
             run_install(dep["install"])
+        installed()
+        start()
+        menu()
     else:
         print("Already installed!")
         input("Press Enter to continue...")
