@@ -1,1 +1,14 @@
-.\config.json
+# Python Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+.venv/
+env/
+bin/
+lib/
+
+# Personal Configuration and Credentials
+#config.json
