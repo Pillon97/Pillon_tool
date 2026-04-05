@@ -71,7 +71,6 @@ def clear():
 
 
 def run_install(cmd):
-    
     try:
         print(f"[>] {cmd}")
         subprocess.run(cmd, shell=True, check=True)
