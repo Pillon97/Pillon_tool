@@ -104,7 +104,7 @@ def installed():
     data["installed"] = True
     with open("config.json", "w") as f:
         json.dump(data, f, indent=4)
-def folders(cmd):
+def folders():
     try:
         os.makedirs("tools", exist_ok=True)
         os.makedirs("dependencies", exist_ok=True)
