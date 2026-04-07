@@ -12,3 +12,12 @@ lib/
 
 # Personal Configuration and Credentials
 config.json
+tools/
+dependencies/
+machines/
+exploits/
+payloads/
+scripts/
+templates/
+# Logs and Reports
+logs/

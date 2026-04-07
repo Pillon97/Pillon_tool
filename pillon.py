@@ -104,6 +104,18 @@ def installed():
     data["installed"] = True
     with open("config.json", "w") as f:
         json.dump(data, f, indent=4)
+def mkfolders(cmd):
+    try:
+        os.makedirs("tools", exist_ok=True)
+        os.makedirs("dependencies", exist_ok=True)
+        os.makedirs("machines", exist_ok=True)
+        os.makedirs("exploits", exist_ok=True)
+        os.makedirs("payloads", exist_ok=True)
+        os.makedirs("scripts", exist_ok=True)
+        os.makedirs("templates", exist_ok=True)
+    except Exception as e:
+        print(f"[-] Failed to create folders: {e}")
+        exit()
 
 if __name__ == "__main__":
     #print(config["installed"])
