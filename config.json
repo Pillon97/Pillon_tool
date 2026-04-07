@@ -34,7 +34,7 @@
         },
         {
             "name": "metasploit-framework",
-            "install": "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall"s
+            "install": "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall"
         },
         {
             "name": "burpsuite",
@@ -42,7 +42,7 @@
         },
         {
             "name": "owasp-zap",
-            "install": "apt install -y owasp-zap"
+            "install": "sudo wget -O tools/zap.sh https://github.com/zaproxy/zaproxy/releases/download/v2.17.0/ZAP_2_17_0_unix.sh && sudo chmod 777 tools/zap.sh && sudo .tools/zap.sh"
         },
         {
             "name": "aircrack-ng",
@@ -69,7 +69,24 @@
         {
             "name": "mc",
             "install": "apt install -y mc"
+        },
+        {
+            "name": "python3",
+            "install": "apt install -y python3"
+        },
+        {
+            "name": "python3-pip",
+            "install": "apt install -y python3-pip"
+        },
+        {
+            "name" : "python3-venv",
+            "install": "apt install -y python3-venv"
+        },
+        {
+            "name" : "java",
+            "install": "apt install -y openjdk-21-jdk"
         }
+
     ],
     "installed": false,
     "username": "",
