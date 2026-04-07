@@ -22,7 +22,7 @@ def load_config():
 config = load_config()
 
 def start():
-    matrix.matrix(50)
+    #matrix.matrix(50)
     clear()
     print("\033[31m", end="")
     print("""#########################################################################
