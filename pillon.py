@@ -129,6 +129,7 @@ if __name__ == "__main__":
         for dep in config["dependencies"]:
             print(f"\n[+] Installing dependency: {dep['name']}")
             run_install(dep["install"])
+        folders()
         installed()
         start()
         menu()
