@@ -10,7 +10,7 @@
         },
         {
             "name": "nikto",
-            "install": "apt install -y nikto"
+            "install": "git clone https://github.com/sullo/nikto"
         },
         {
             "name": "gobuster",
