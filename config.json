@@ -58,7 +58,7 @@
         },
         {
             "name": "seclists",
-            "install": "git clone https://github.com/danielmiessler/SecLists.git tools/"
+            "install": "git clone https://github.com/danielmiessler/SecLists.git tools/SecLists"
         }
     ],
     "dependencies": [
