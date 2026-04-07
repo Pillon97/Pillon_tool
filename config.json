@@ -10,7 +10,7 @@
         },
         {
             "name": "nikto",
-            "install": "git clone https://github.com/sullo/nikto"
+            "install": "git clone https://github.com/sullo/nikto tools/"
         },
         {
             "name": "gobuster",
@@ -34,7 +34,7 @@
         },
         {
             "name": "metasploit-framework",
-            "install": "apt install -y metasploit-framework"
+            "install": "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall"s
         },
         {
             "name": "burpsuite",
@@ -58,7 +58,7 @@
         },
         {
             "name": "seclists",
-            "install": "apt install -y seclists"
+            "install": "https://github.com/danielmiessler/SecLists.git tools/"
         }
     ],
     "dependencies": [
