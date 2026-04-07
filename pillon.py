@@ -107,7 +107,6 @@ def installed():
 def folders():
     try:
         os.makedirs("tools", exist_ok=True)
-        os.makedirs("dependencies", exist_ok=True)
         os.makedirs("machines", exist_ok=True)
         os.makedirs("exploits", exist_ok=True)
         os.makedirs("payloads", exist_ok=True)
