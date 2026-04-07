@@ -1,0 +1,77 @@
+{
+    "tools": [
+        {
+            "name": "nmap",
+            "install": "apt install -y nmap"
+        },
+        {
+            "name": "wireshark",
+            "install": "apt install -y wireshark"
+        },
+        {
+            "name": "nikto",
+            "install": "apt install -y nikto"
+        },
+        {
+            "name": "gobuster",
+            "install": "apt install -y gobuster"
+        },
+        {
+            "name": "sqlmap",
+            "install": "apt install -y sqlmap"
+        },
+        {
+            "name": "hydra",
+            "install": "apt install -y hydra"
+        },
+        {
+            "name": "john",
+            "install": "apt install -y john"
+        },
+        {
+            "name": "hashcat",
+            "install": "apt install -y hashcat"
+        },
+        {
+            "name": "metasploit-framework",
+            "install": "apt install -y metasploit-framework"
+        },
+        {
+            "name": "burpsuite",
+            "install": "apt install -y burpsuite"
+        },
+        {
+            "name": "owasp-zap",
+            "install": "apt install -y owasp-zap"
+        },
+        {
+            "name": "aircrack-ng",
+            "install": "apt install -y aircrack-ng"
+        },
+        {
+            "name": "ettercap",
+            "install": "apt install -y ettercap-graphical"
+        },
+        {
+            "name": "netcat",
+            "install": "apt install -y netcat"
+        },
+        {
+            "name": "seclists",
+            "install": "apt install -y seclists"
+        }
+    ],
+    "dependencies": [
+        {
+            "name": "git",
+            "install": "apt install git -y"
+        },
+        {
+            "name": "mc",
+            "install": "apt install -y mc"
+        }
+    ],
+    "installed": false,
+    "username": "",
+    "password": ""
+}
