@@ -2,7 +2,7 @@ import subprocess
 import json
 import matrix
 import os
-import login
+#import login
 import hashlib
 import getpass
 import datetime
@@ -39,7 +39,7 @@ def start():
 
     print("Wellcome Pillon!")
 
-    login.login()
+    #login.login()
 
     clear()
     
@@ -55,7 +55,7 @@ def menu():
     print("Menu")
     print("1. Install tools")
     print("2. Check for updates")
-    print("3. tools")
+    print("3. scripts")
     print("4. Exit")
 
     x = int(input("Choose an option: "))
@@ -74,7 +74,23 @@ def menu():
         subprocess.run("apt upgrade -y", shell=True, check=True)
         print("Done!")
     elif x == 3:
-        print("Tools:")
+        print("\nAvailable Scripts:")
+        try:
+            script_files = [f for f in os.listdir("scripts") if f.endswith(".py")]
+            if not script_files:
+                print("No scripts available in the 'scripts' folder.")
+            else:
+                for i, s in enumerate(script_files, 1):
+                    print(f"{i}. {s}")
+                s_idx = input("\nChoose a script to run (Enter to cancel): ")
+                if s_idx.isdigit() and 1 <= int(s_idx) <= len(script_files):
+                    selected_script = script_files[int(s_idx)-1]
+                    print(f"\n[*] Running {selected_script}...\n")
+                    subprocess.run(f"python scripts/{selected_script}", shell=True)
+                else:
+                    print("Invalid choice or cancelled.")
+        except FileNotFoundError:
+            print("Scripts folder not found.")
     elif x == 4:
         print("Exiting...")
         exit()
