@@ -17,7 +17,6 @@ dependencies/
 machines/
 exploits/
 payloads/
-scripts/
 templates/
 # Logs and Reports
 logs/
