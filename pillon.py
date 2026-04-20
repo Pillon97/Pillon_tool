@@ -156,7 +156,7 @@ if __name__ == "__main__":
     #print(config["installed"])
     if config["installed"] == False:
         log_install("Starting first-time setup/installation process.")
-        register_user()
+        #register_user()
         for tool in config["tools"]:
             print(f"\n[+] Installing {tool['name']}")
             log_install(f"Installing tool: {tool['name']}")
