@@ -9,7 +9,7 @@ venv/
 env/
 bin/
 lib/
-
+install.log
 # Personal Configuration and Credentials
 #config.json
 tools/
