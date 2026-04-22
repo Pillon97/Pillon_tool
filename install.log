@@ -90,3 +90,30 @@
 [2026-04-20 14:36:53] FAILED to execute: apt install -y netcat
 [2026-04-20 14:36:53] Installing tool: seclists
 [2026-04-20 14:36:53] Executing command: git clone https://github.com/danielmiessler/SecLists.git tools/SecLists
+[2026-04-22 10:41:35] Starting first-time setup/installation process.
+[2026-04-22 10:41:35] Installing tool: nmap
+[2026-04-22 10:41:35] Executing command: apt install -y nmap
+[2026-04-22 10:41:35] FAILED to execute: apt install -y nmap
+[2026-04-22 10:41:35] Installing tool: wireshark
+[2026-04-22 10:41:35] Executing command: apt install -y wireshark
+[2026-04-22 10:41:35] FAILED to execute: apt install -y wireshark
+[2026-04-22 10:41:35] Installing tool: nikto
+[2026-04-22 10:41:35] Executing command: git clone https://github.com/sullo/nikto tools/nikto
+[2026-04-22 10:41:38] Successfully executed: git clone https://github.com/sullo/nikto tools/nikto
+[2026-04-22 10:41:38] Installing tool: gobuster
+[2026-04-22 10:41:38] Executing command: apt install -y gobuster
+[2026-04-22 10:41:38] FAILED to execute: apt install -y gobuster
+[2026-04-22 10:41:38] Installing tool: sqlmap
+[2026-04-22 10:41:38] Executing command: apt install -y sqlmap
+[2026-04-22 10:41:38] FAILED to execute: apt install -y sqlmap
+[2026-04-22 10:41:38] Installing tool: hydra
+[2026-04-22 10:41:38] Executing command: apt install -y hydra
+[2026-04-22 10:41:38] FAILED to execute: apt install -y hydra
+[2026-04-22 10:41:38] Installing tool: john
+[2026-04-22 10:41:38] Executing command: apt install -y john
+[2026-04-22 10:41:38] FAILED to execute: apt install -y john
+[2026-04-22 10:41:38] Installing tool: hashcat
+[2026-04-22 10:41:38] Executing command: apt install -y hashcat
+[2026-04-22 10:41:38] FAILED to execute: apt install -y hashcat
+[2026-04-22 10:41:38] Installing tool: metasploit-framework
+[2026-04-22 10:41:38] Executing command: curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > tools/msfinstall && chmod 755 tools/msfinstall && ./tools/msfinstall
