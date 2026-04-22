@@ -109,6 +109,14 @@
         {
             "name": "java",
             "install": "apt install -y openjdk-21-jdk"
+        },
+        {
+            "name": "openvpn",
+            "install": "apt install -y openvpn"
+        },
+        {
+            "name": "byobu",
+            "install": "apt install -y byobu"
         }
     ],
     "installed": false,

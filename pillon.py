@@ -40,8 +40,6 @@ def start():
     print("Wellcome Pillon!")
 
     #login.login()
-
-    clear()
     
     input("Press Enter to continue...")
     #print("Check updates...")

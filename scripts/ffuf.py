@@ -27,8 +27,8 @@ def run_ffuf():
         print(f"[-] Failed to create directory {target_dir}: {e}")
         return
 
-    common_wordlist = "tools/seclists/Discovery/Web-Content/common.txt"
-    subdomain_wordlist = "tools/seclists/Discovery/DNS/subdomains-top1million-110000.txt"
+    common_wordlist = "tools/SecLists/Discovery/Web-Content/common.txt"
+    subdomain_wordlist = "tools/SecLists/Discovery/DNS/subdomains-top1million-110000.txt"
     
     output_file = os.path.join(target_dir, "ffuf_scan.txt")
     
