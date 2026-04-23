@@ -35,7 +35,7 @@ def run_ffuf():
     if is_ip(target):
         print("[*] Target is an IP address. Running directory discovery...")
         ip = f"http://{target}"
-        cmd = f"ffuf -u {ip}/FUZZ -w {common_wordlist} -o \"{output_file}\""
+        cmd = f"ffuf -u {ip}/FUZZ -w {common_wordlist} -o \"{output_file}\" -of md"
     elif is_domain(target):
         print("[*] Target is a Domain. Running subdomain/vhost discovery...")
         domain = target.replace("http://", "").replace("https://", "")
@@ -46,7 +46,7 @@ def run_ffuf():
     print(f"\n[*] Running command: {cmd}")
     subdomain_scan = input("[Y/N] Would you like to run a subdomain scan?")
     if subdomain_scan.lower() == "y":
-        cmd = f"ffuf -u {url}/FUZZ -w {subdomain_wordlist} -o \"{output_file}\""
+        cmd = f"ffuf -u {url}/FUZZ -w {subdomain_wordlist} -o \"{output_file}\" -of md"
         print(f"\n[*] Running command: {cmd}")
     try:
         subprocess.run(cmd, shell=True, check=True)
