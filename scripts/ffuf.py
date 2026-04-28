@@ -12,6 +12,12 @@ args = parser.parse_args()
 url = "http://"+args.url+"/FUZZ"
 
 def run_ffuf():
+    print("=== FFUF Scan ===")
+    print("Select machine directory!")
+    path = "machines"
+    dirs = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
+    for i, d in enumerate(dirs):
+        print(f"{i+1}. {d}")
     command = f"ffuf -u {url} -w {args.wordlist} -o {args.output} -of csv"
     try:
         result = subprocess.run(command, shell=True, check=True) 
