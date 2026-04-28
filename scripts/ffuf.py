@@ -11,8 +11,8 @@ parser.add_argument("-a", "--auto", action="store_true", help="Automatically run
 parser.add_argument("-w", "--wordlist", default="~/Pillon_tool/tools/seclists/Discovery/Web-Content/common.txt", help="Custom wordlist file for ffuf")
 args = parser.parse_args()
 
-def run_ffuf(payload):
-    command = f"ffuf -u {args.url} -w {payload} -o {args.output} -of csv"
+def run_ffuf():
+    command = f"ffuf -u {args.url} -w {args.wordlist} -o {args.output} -of csv"
     try:
         result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         print(f"FFUF scan completed for payload: {payload}")
@@ -20,4 +20,4 @@ def run_ffuf(payload):
         print(f"Error running ffuf: {e.stderr.decode()}")
 
 if __name__ == "__main__":
-    run_ffuf(args.wordlist)
+    run_ffuf()
