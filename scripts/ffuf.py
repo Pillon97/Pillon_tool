@@ -1,60 +1,23 @@
 import os
 import subprocess
 import re
+import argparse
 
-def is_ip(target):
-    return re.match(r"^\d{1,3}(\.\d{1,3}){3}$", target) is not None
-def is_domain(target):
-    return re.match(r"^([a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?$", target) is not None
+parser = argparse.ArgumentParser(description="FFUF URL Scanner")
+parser.add_argument("-i", "--input", help="Input file containing payloads (one per line)")
+parser.add_argument("-o", "--output", default="ffuf_scan.txt", help="Output file name (default: ffuf_scan.txt)")
+parser.add_argument("-u", "--url", default="http://example.com/FUZZ", help="Target URL with FUZZ keyword (default: http://example.com/FUZZ)")
+parser.add_argument("-a", "--auto", action="store_true", help="Automatically run ffuf with default settings")
+parser.add_argument("-w", "--wordlist", default="~/Pillon_tool/tools/seclists/Discovery/Web-Content/common.txt", help="Custom wordlist file for ffuf")
+args = parser.parse_args()
 
-def run_ffuf():
-    print("=== ffuf Scan ===")
-    
-    target = input("Enter target IP/Domain: ").strip()
-    while not target:
-        print("Target cannot be empty.")
-        target = input("Enter target IP/Domain: ").strip()
-        
-    folder_name = input("Enter specific folder name for the machine (inside 'machines'): ").strip()
-    while not folder_name:
-        print("Folder name cannot be empty.")
-        folder_name = input("Enter specific folder name for the machine (inside 'machines'): ").strip()
-
-    target_dir = os.path.join("machines", folder_name)
+def run_ffuf(payload):
+    command = f"ffuf -u {args.url} -w {payload} -o {args.output} -of csv"
     try:
-        os.makedirs(target_dir, exist_ok=True)
-    except Exception as e:
-        print(f"[-] Failed to create directory {target_dir}: {e}")
-        return
-
-    common_wordlist = "tools/SecLists/Discovery/Web-Content/common.txt"
-    subdomain_wordlist = "tools/SecLists/Discovery/DNS/subdomains-top1million-110000.txt"
-    
-    output_file = os.path.join(target_dir, "ffuf_scan.txt")
-    
-    if is_ip(target):
-        print("[*] Target is an IP address. Running directory discovery...")
-        ip = f"http://{target}"
-        cmd = f"ffuf -u {ip}/FUZZ -w {common_wordlist} -o \"{output_file}\" -of md"
-    elif is_domain(target):
-        print("[*] Target is a Domain. Running subdomain/vhost discovery...")
-        domain = target.replace("http://", "").replace("https://", "")
-        url = f"http://{domain}"
-    else:
-        print("[*] Target is not an IP address or Domain.")
-        return
-    print(f"\n[*] Running command: {cmd}")
-    subdomain_scan = input("[Y/N] Would you like to run a subdomain scan?")
-    if subdomain_scan.lower() == "y":
-        cmd = f"ffuf -u {url}/FUZZ -w {subdomain_wordlist} -o \"{output_file}\" -of md"
-        print(f"\n[*] Running command: {cmd}")
-    try:
-        subprocess.run(cmd, shell=True, check=True)
-        print(f"\n[+] Scan complete! Output saved to: {output_file}")
-    except subprocess.CalledProcessError:
-        print("\n[-] ffuf scan failed or was interrupted.")
-    except Exception as e:
-        print(f"\n[-] An error occurred: {e}")
+        result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"FFUF scan completed for payload: {payload}")
+    except subprocess.CalledProcessError as e:
+        print(f"Error running ffuf: {e.stderr.decode()}")
 
 if __name__ == "__main__":
-    run_ffuf()
+    run_ffuf(args.wordlist)
