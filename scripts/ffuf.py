@@ -15,7 +15,7 @@ def run_ffuf():
     command = f"ffuf -u {args.url} -w {args.wordlist} -o {args.output} -of csv"
     try:
         result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        print(f"FFUF scan completed for payload: {payload}")
+        print(f"FFUF scan completed for payload: {args.url}")
     except subprocess.CalledProcessError as e:
         print(f"Error running ffuf: {e.stderr.decode()}")
 
