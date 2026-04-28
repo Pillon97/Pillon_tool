@@ -12,7 +12,7 @@ args = parser.parse_args()
 url = "http://"+args.url+"/FUZZ"
 
 def run_ffuf():
-    command = f"ffuf -u {args.url} -w {args.wordlist} -o {args.output} -of csv"
+    command = f"ffuf -u {url} -w {args.wordlist} -o {args.output} -of csv"
     try:
         result = subprocess.run(command, shell=True, check=True) 
         print(f"FFUF scan completed for payload: {args.url}")
