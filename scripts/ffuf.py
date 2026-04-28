@@ -28,7 +28,8 @@ def run_ffuf():
             selected_dir = dirs[int(xid)-1]
             print(f"Selected machine directory: {selected_dir}")
         elif xid=="":
-            make_machine.make_machine()
+            selected_dir = make_machine.make_machine()
+            
         else:
             print("Invalid choice or cancelled.")
             return
