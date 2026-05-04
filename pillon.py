@@ -15,7 +15,7 @@ def log_install(message):
 def load_config():
     if not os.path.exists("config.json") or os.stat("config.json").st_size == 0:
         # Return a default structure if the file doesn't exist or is empty
-        return {"installed": False, "username": "", "password": "", "tools": [], "dependencies": []}
+        subprocess.run("cp default/config.json config.json", shell=True, check=True)
     with open("config.json") as f:
         return json.load(f)
 
@@ -152,8 +152,6 @@ def folders():
 
 if __name__ == "__main__":
     #print(config["installed"])
-    if not os.path.exists("config.json"):
-        subprocess.run("cp default/config.json config.json", shell=True)
     if config["installed"] == False:
         log_install("Starting first-time setup/installation process.")
         #register_user()
