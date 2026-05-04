@@ -6,6 +6,15 @@ import os
 import hashlib
 import getpass
 import datetime
+import argparse
+
+parser = argparse.ArgumentParser(description="Pillon Tool")
+parser.add_argument("-i", "--install", action="store_true", help="Run installation process")
+parser.add_argument("-z", "--installed", action="store_true", help="Check for updates")
+
+args = parser.parse_args()
+
+
 
 def log_install(message):
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -151,8 +160,10 @@ def folders():
 
 
 if __name__ == "__main__":
+    if args.installed == True:
+        installed()
     #print(config["installed"])
-    if config["installed"] == False:
+    if config["installed"] == False or args.install == True:
         log_install("Starting first-time setup/installation process.")
         #register_user()
         for tool in config["tools"]:
