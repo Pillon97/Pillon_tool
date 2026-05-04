@@ -152,6 +152,8 @@ def folders():
 
 if __name__ == "__main__":
     #print(config["installed"])
+    if not os.path.exists("config.json"):
+        subprocess.run("cp default/config.json config.json", shell=True)
     if config["installed"] == False:
         log_install("Starting first-time setup/installation process.")
         #register_user()
