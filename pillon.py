@@ -25,6 +25,8 @@ def load_config():
     if not os.path.exists("config.json") or os.stat("config.json").st_size == 0:
         # Return a default structure if the file doesn't exist or is empty
         subprocess.run("cp default/config.json config.json", shell=True, check=True)
+    if args.installed == True:
+        installed()
     with open("config.json") as f:
         return json.load(f)
 
@@ -160,8 +162,6 @@ def folders():
 
 
 if __name__ == "__main__":
-    if args.installed == True:
-        installed()
     #print(config["installed"])
     if config["installed"] == False or args.install == True:
         log_install("Starting first-time setup/installation process.")
@@ -176,6 +176,8 @@ if __name__ == "__main__":
             run_install(dep["install"])
         folders()
         installed()
+        subprocess.run("sudo chown -R pillon:pillon $HOME/*", shell=True, check=True)
+        subprocess.run("cp default/.bashrc $HOME/.bashrc", shell=True, check=True)
         log_install("First-time setup completed successfully.")
         start()
         menu()
