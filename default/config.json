@@ -54,7 +54,7 @@
         },
         {
             "name": "netcat",
-            "install": "apt install -y netcat"
+            "install": "sudo apt install netcat-traditional -y"
         },
         {
             "name": "seclists",
