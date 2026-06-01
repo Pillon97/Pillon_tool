@@ -117,3 +117,255 @@
 [2026-04-22 10:41:38] FAILED to execute: apt install -y hashcat
 [2026-04-22 10:41:38] Installing tool: metasploit-framework
 [2026-04-22 10:41:38] Executing command: curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > tools/msfinstall && chmod 755 tools/msfinstall && ./tools/msfinstall
+[2026-05-27 08:34:44] Starting first-time setup/installation process.
+[2026-05-27 08:34:44] Installing tool: nmap
+[2026-05-27 08:34:44] Executing command: apt install -y nmap
+[2026-05-27 08:34:45] FAILED to execute: apt install -y nmap
+[2026-05-27 08:34:45] Installing tool: wireshark
+[2026-05-27 08:34:45] Executing command: apt install -y wireshark
+[2026-05-27 08:34:45] FAILED to execute: apt install -y wireshark
+[2026-05-27 08:34:45] Installing tool: nikto
+[2026-05-27 08:34:45] Executing command: git clone https://github.com/sullo/nikto tools/nikto
+[2026-05-27 08:34:55] Starting first-time setup/installation process.
+[2026-05-27 08:34:55] Installing tool: nmap
+[2026-05-27 08:34:55] Executing command: apt install -y nmap
+[2026-05-27 08:34:55] FAILED to execute: apt install -y nmap
+[2026-05-27 08:34:55] Installing tool: wireshark
+[2026-05-27 08:34:55] Executing command: apt install -y wireshark
+[2026-05-27 08:34:55] FAILED to execute: apt install -y wireshark
+[2026-05-27 08:34:55] Installing tool: nikto
+[2026-05-27 08:34:55] Executing command: git clone https://github.com/sullo/nikto tools/nikto
+[2026-05-27 08:35:53] Starting first-time setup/installation process.
+[2026-05-27 08:35:53] Installing tool: nmap
+[2026-05-27 08:35:53] Executing command: apt install -y nmap
+[2026-05-27 08:35:59] Successfully executed: apt install -y nmap
+[2026-05-27 08:35:59] Installing tool: wireshark
+[2026-05-27 08:35:59] Executing command: apt install -y wireshark
+[2026-05-27 08:37:52] Successfully executed: apt install -y wireshark
+[2026-05-27 08:37:52] Installing tool: nikto
+[2026-05-27 08:37:52] Executing command: git clone https://github.com/sullo/nikto tools/nikto
+[2026-05-27 08:37:56] Successfully executed: git clone https://github.com/sullo/nikto tools/nikto
+[2026-05-27 08:37:56] Installing tool: gobuster
+[2026-05-27 08:37:56] Executing command: apt install -y gobuster
+[2026-05-27 08:37:58] Successfully executed: apt install -y gobuster
+[2026-05-27 08:37:58] Installing tool: sqlmap
+[2026-05-27 08:37:58] Executing command: apt install -y sqlmap
+[2026-05-27 08:38:04] Successfully executed: apt install -y sqlmap
+[2026-05-27 08:38:04] Installing tool: hydra
+[2026-05-27 08:38:04] Executing command: apt install -y hydra
+[2026-05-27 08:38:16] Successfully executed: apt install -y hydra
+[2026-05-27 08:38:16] Installing tool: john
+[2026-05-27 08:38:16] Executing command: apt install -y john
+[2026-05-27 08:38:39] Successfully executed: apt install -y john
+[2026-05-27 08:38:39] Installing tool: hashcat
+[2026-05-27 08:38:39] Executing command: apt install -y hashcat
+[2026-05-27 08:39:26] Successfully executed: apt install -y hashcat
+[2026-05-27 08:39:26] Installing tool: metasploit-framework
+[2026-05-27 08:39:26] Executing command: curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > tools/msfinstall && chmod 755 tools/msfinstall && ./tools/msfinstall
+[2026-05-27 08:41:54] Successfully executed: curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > tools/msfinstall && chmod 755 tools/msfinstall && ./tools/msfinstall
+[2026-05-27 08:41:54] Installing tool: burpsuite
+[2026-05-27 08:41:54] Executing command: apt install -y burpsuite
+[2026-05-27 08:42:48] Successfully executed: apt install -y burpsuite
+[2026-05-27 08:42:48] Installing tool: owasp-zap
+[2026-05-27 08:42:48] Executing command: sudo wget -O tools/zap.sh https://github.com/zaproxy/zaproxy/releases/download/v2.17.0/ZAP_2_17_0_unix.sh && sudo chmod 777 tools/zap.sh && sudo ./tools/zap.sh
+[2026-05-27 08:52:40] Successfully executed: sudo wget -O tools/zap.sh https://github.com/zaproxy/zaproxy/releases/download/v2.17.0/ZAP_2_17_0_unix.sh && sudo chmod 777 tools/zap.sh && sudo ./tools/zap.sh
+[2026-05-27 08:52:41] Installing tool: aircrack-ng
+[2026-05-27 08:52:41] Executing command: apt install -y aircrack-ng
+[2026-05-27 08:52:54] Successfully executed: apt install -y aircrack-ng
+[2026-05-27 08:52:54] Installing tool: ettercap
+[2026-05-27 08:52:54] Executing command: apt install -y ettercap-graphical
+[2026-05-27 08:53:14] Successfully executed: apt install -y ettercap-graphical
+[2026-05-27 08:53:14] Installing tool: netcat
+[2026-05-27 08:53:14] Executing command: apt install -y netcat
+[2026-05-27 08:53:15] FAILED to execute: apt install -y netcat
+[2026-05-27 08:53:15] Installing tool: seclists
+[2026-05-27 08:53:15] Executing command: git clone https://github.com/danielmiessler/SecLists.git tools/SecLists
+[2026-05-27 08:58:29] Starting first-time setup/installation process.
+[2026-05-27 08:58:29] Installing tool: nmap
+[2026-05-27 08:58:29] Executing command: apt install -y nmap
+[2026-05-27 08:58:31] Successfully executed: apt install -y nmap
+[2026-05-27 08:58:31] Installing tool: wireshark
+[2026-05-27 08:58:31] Executing command: apt install -y wireshark
+[2026-05-27 08:58:33] Successfully executed: apt install -y wireshark
+[2026-05-27 08:58:33] Installing tool: nikto
+[2026-05-27 08:58:33] Executing command: git clone https://github.com/sullo/nikto tools/nikto
+[2026-05-27 08:58:33] FAILED to execute: git clone https://github.com/sullo/nikto tools/nikto
+[2026-05-27 08:58:33] Installing tool: gobuster
+[2026-05-27 08:58:33] Executing command: apt install -y gobuster
+[2026-05-27 08:58:36] Successfully executed: apt install -y gobuster
+[2026-05-27 08:58:36] Installing tool: sqlmap
+[2026-05-27 08:58:36] Executing command: apt install -y sqlmap
+[2026-05-27 10:19:22] Starting first-time setup/installation process.
+[2026-05-27 10:19:22] Installing tool: nmap
+[2026-05-27 10:19:22] Executing command: apt install -y nmap
+[2026-05-27 10:19:22] FAILED to execute: apt install -y nmap
+[2026-05-27 10:19:22] Installing tool: wireshark
+[2026-05-27 10:19:22] Executing command: apt install -y wireshark
+[2026-05-27 10:19:22] FAILED to execute: apt install -y wireshark
+[2026-05-27 10:19:22] Installing tool: nikto
+[2026-05-27 10:19:22] Executing command: git clone https://github.com/sullo/nikto tools/nikto
+[2026-05-27 10:19:22] FAILED to execute: git clone https://github.com/sullo/nikto tools/nikto
+[2026-05-27 10:19:22] Installing tool: gobuster
+[2026-05-27 10:19:22] Executing command: apt install -y gobuster
+[2026-05-27 10:19:22] FAILED to execute: apt install -y gobuster
+[2026-05-27 10:19:22] Installing tool: sqlmap
+[2026-05-27 10:19:22] Executing command: apt install -y sqlmap
+[2026-05-27 10:19:22] FAILED to execute: apt install -y sqlmap
+[2026-05-27 10:19:22] Installing tool: hydra
+[2026-05-27 10:19:22] Executing command: apt install -y hydra
+[2026-05-27 10:19:22] FAILED to execute: apt install -y hydra
+[2026-05-27 10:19:22] Installing tool: john
+[2026-05-27 10:19:22] Executing command: apt install -y john
+[2026-05-27 10:19:22] FAILED to execute: apt install -y john
+[2026-05-27 10:19:22] Installing tool: hashcat
+[2026-05-27 10:19:22] Executing command: apt install -y hashcat
+[2026-05-27 10:19:22] FAILED to execute: apt install -y hashcat
+[2026-05-27 10:19:22] Installing tool: metasploit-framework
+[2026-05-27 10:19:22] Executing command: curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > tools/msfinstall && chmod 755 tools/msfinstall && ./tools/msfinstall
+[2026-05-27 10:19:22] FAILED to execute: curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > tools/msfinstall && chmod 755 tools/msfinstall && ./tools/msfinstall
+[2026-05-27 10:19:22] Installing tool: burpsuite
+[2026-05-27 10:19:22] Executing command: apt install -y burpsuite
+[2026-05-27 10:19:22] FAILED to execute: apt install -y burpsuite
+[2026-05-27 10:19:22] Installing tool: owasp-zap
+[2026-05-27 10:19:22] Executing command: sudo wget -O tools/zap.sh https://github.com/zaproxy/zaproxy/releases/download/v2.17.0/ZAP_2_17_0_unix.sh && sudo chmod 777 tools/zap.sh && sudo ./tools/zap.sh
+[2026-05-27 10:19:28] Starting first-time setup/installation process.
+[2026-05-27 10:19:28] Installing tool: nmap
+[2026-05-27 10:19:28] Executing command: apt install -y nmap
+[2026-05-27 10:19:29] Successfully executed: apt install -y nmap
+[2026-05-27 10:19:29] Installing tool: wireshark
+[2026-05-27 10:19:29] Executing command: apt install -y wireshark
+[2026-05-27 10:19:29] Successfully executed: apt install -y wireshark
+[2026-05-27 10:19:29] Installing tool: nikto
+[2026-05-27 10:19:29] Executing command: git clone https://github.com/sullo/nikto tools/nikto
+[2026-05-27 10:19:29] FAILED to execute: git clone https://github.com/sullo/nikto tools/nikto
+[2026-05-27 10:19:29] Installing tool: gobuster
+[2026-05-27 10:19:29] Executing command: apt install -y gobuster
+[2026-05-27 10:19:30] Successfully executed: apt install -y gobuster
+[2026-05-27 10:19:30] Installing tool: sqlmap
+[2026-05-27 10:19:30] Executing command: apt install -y sqlmap
+[2026-05-27 10:19:30] Successfully executed: apt install -y sqlmap
+[2026-05-27 10:19:30] Installing tool: hydra
+[2026-05-27 10:19:30] Executing command: apt install -y hydra
+[2026-05-27 10:19:31] Successfully executed: apt install -y hydra
+[2026-05-27 10:19:31] Installing tool: john
+[2026-05-27 10:19:31] Executing command: apt install -y john
+[2026-05-27 10:19:32] Successfully executed: apt install -y john
+[2026-05-27 10:19:32] Installing tool: hashcat
+[2026-05-27 10:19:32] Executing command: apt install -y hashcat
+[2026-05-27 10:19:32] Successfully executed: apt install -y hashcat
+[2026-05-27 10:19:32] Installing tool: metasploit-framework
+[2026-05-27 10:19:32] Executing command: curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > tools/msfinstall && chmod 755 tools/msfinstall && ./tools/msfinstall
+[2026-05-27 10:19:34] Successfully executed: curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > tools/msfinstall && chmod 755 tools/msfinstall && ./tools/msfinstall
+[2026-05-27 10:19:34] Installing tool: burpsuite
+[2026-05-27 10:19:34] Executing command: apt install -y burpsuite
+[2026-05-27 10:19:35] Successfully executed: apt install -y burpsuite
+[2026-05-27 10:19:35] Installing tool: owasp-zap
+[2026-05-27 10:19:35] Executing command: sudo wget -O tools/zap.sh https://github.com/zaproxy/zaproxy/releases/download/v2.17.0/ZAP_2_17_0_unix.sh && sudo chmod 777 tools/zap.sh && sudo ./tools/zap.sh
+[2026-05-27 10:21:19] FAILED to execute: sudo wget -O tools/zap.sh https://github.com/zaproxy/zaproxy/releases/download/v2.17.0/ZAP_2_17_0_unix.sh && sudo chmod 777 tools/zap.sh && sudo ./tools/zap.sh
+[2026-05-27 10:21:19] Installing tool: aircrack-ng
+[2026-05-27 10:21:19] Executing command: apt install -y aircrack-ng
+[2026-05-27 10:21:20] Successfully executed: apt install -y aircrack-ng
+[2026-05-27 10:21:20] Installing tool: ettercap
+[2026-05-27 10:21:20] Executing command: apt install -y ettercap-graphical
+[2026-05-27 10:21:20] Successfully executed: apt install -y ettercap-graphical
+[2026-05-27 10:21:20] Installing tool: netcat
+[2026-05-27 10:21:20] Executing command: apt install -y netcat
+[2026-05-27 10:21:21] FAILED to execute: apt install -y netcat
+[2026-05-27 10:21:21] Installing tool: seclists
+[2026-05-27 10:21:21] Executing command: git clone https://github.com/danielmiessler/SecLists.git tools/SecLists
+[2026-05-27 10:30:48] FAILED to execute: git clone https://github.com/danielmiessler/SecLists.git tools/SecLists
+[2026-05-27 10:30:48] Installing tool: hashcat
+[2026-05-27 10:30:48] Executing command: apt install hashcat -y
+[2026-05-27 10:30:49] Successfully executed: apt install hashcat -y
+[2026-05-27 10:30:49] Installing tool: hydra
+[2026-05-27 10:30:49] Executing command: apt install -y hydra
+[2026-05-27 10:30:50] Successfully executed: apt install -y hydra
+[2026-05-27 10:30:50] Installing tool: rockyou
+[2026-05-27 10:30:50] Executing command: git clone https://github.com/zacheller/rockyou.git tools/rockyou
+[2026-05-27 12:40:55] FAILED to execute: git clone https://github.com/zacheller/rockyou.git tools/rockyou
+[2026-05-27 12:40:55] Installing tool: wpscan
+[2026-05-27 12:40:55] Executing command: git clone https://github.com/wpscanteam/wpscan.git tools/wpscan
+[2026-05-27 12:41:05] FAILED to execute: git clone https://github.com/wpscanteam/wpscan.git tools/wpscan
+[2026-05-27 12:41:05] Installing tool: ffuf
+[2026-05-27 12:41:05] Executing command: git clone https://github.com/ffuf/ffuf.git tools/ffuf
+[2026-05-27 12:41:15] FAILED to execute: git clone https://github.com/ffuf/ffuf.git tools/ffuf
+[2026-05-27 12:41:15] Installing tool: sublist3r
+[2026-05-27 12:41:15] Executing command: git clone https://github.com/aboul3la/Sublist3r.git tools/Sublist3r
+[2026-06-01 14:44:35] Starting first-time setup/installation process.
+[2026-06-01 14:44:35] Installing tool: nmap
+[2026-06-01 14:44:35] Executing command: apt install -y nmap
+[2026-06-01 14:44:35] FAILED to execute: apt install -y nmap
+[2026-06-01 14:44:35] Installing tool: wireshark
+[2026-06-01 14:44:35] Executing command: apt install -y wireshark
+[2026-06-01 14:44:35] FAILED to execute: apt install -y wireshark
+[2026-06-01 14:44:35] Installing tool: nikto
+[2026-06-01 14:44:35] Executing command: git clone https://github.com/sullo/nikto tools/nikto
+[2026-06-01 14:44:35] FAILED to execute: git clone https://github.com/sullo/nikto tools/nikto
+[2026-06-01 14:44:35] Installing tool: gobuster
+[2026-06-01 14:44:35] Executing command: apt install -y gobuster
+[2026-06-01 14:44:35] FAILED to execute: apt install -y gobuster
+[2026-06-01 14:44:35] Installing tool: sqlmap
+[2026-06-01 14:44:35] Executing command: apt install -y sqlmap
+[2026-06-01 14:44:35] FAILED to execute: apt install -y sqlmap
+[2026-06-01 14:44:35] Installing tool: hydra
+[2026-06-01 14:44:35] Executing command: apt install -y hydra
+[2026-06-01 14:44:35] FAILED to execute: apt install -y hydra
+[2026-06-01 14:44:35] Installing tool: john
+[2026-06-01 14:44:35] Executing command: apt install -y john
+[2026-06-01 14:44:35] FAILED to execute: apt install -y john
+[2026-06-01 14:44:35] Installing tool: hashcat
+[2026-06-01 14:44:35] Executing command: apt install -y hashcat
+[2026-06-01 14:44:35] FAILED to execute: apt install -y hashcat
+[2026-06-01 14:44:35] Installing tool: metasploit-framework
+[2026-06-01 14:44:35] Executing command: curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > tools/msfinstall && chmod 755 tools/msfinstall && ./tools/msfinstall
+[2026-06-01 14:44:35] FAILED to execute: curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > tools/msfinstall && chmod 755 tools/msfinstall && ./tools/msfinstall
+[2026-06-01 14:44:35] Installing tool: burpsuite
+[2026-06-01 14:44:35] Executing command: apt install -y burpsuite
+[2026-06-01 14:44:35] FAILED to execute: apt install -y burpsuite
+[2026-06-01 14:44:35] Installing tool: owasp-zap
+[2026-06-01 14:44:35] Executing command: sudo wget -O tools/zap.sh https://github.com/zaproxy/zaproxy/releases/download/v2.17.0/ZAP_2_17_0_unix.sh && sudo chmod 777 tools/zap.sh && sudo ./tools/zap.sh
+[2026-06-01 14:44:42] Starting first-time setup/installation process.
+[2026-06-01 14:44:42] Installing tool: nmap
+[2026-06-01 14:44:42] Executing command: apt install -y nmap
+[2026-06-01 14:44:43] Successfully executed: apt install -y nmap
+[2026-06-01 14:44:43] Installing tool: wireshark
+[2026-06-01 14:44:43] Executing command: apt install -y wireshark
+[2026-06-01 14:44:44] Successfully executed: apt install -y wireshark
+[2026-06-01 14:44:44] Installing tool: nikto
+[2026-06-01 14:44:44] Executing command: git clone https://github.com/sullo/nikto tools/nikto
+[2026-06-01 14:44:44] FAILED to execute: git clone https://github.com/sullo/nikto tools/nikto
+[2026-06-01 14:44:44] Installing tool: gobuster
+[2026-06-01 14:44:44] Executing command: apt install -y gobuster
+[2026-06-01 14:44:44] Successfully executed: apt install -y gobuster
+[2026-06-01 14:44:44] Installing tool: sqlmap
+[2026-06-01 14:44:44] Executing command: apt install -y sqlmap
+[2026-06-01 14:44:45] Successfully executed: apt install -y sqlmap
+[2026-06-01 14:44:45] Installing tool: hydra
+[2026-06-01 14:44:45] Executing command: apt install -y hydra
+[2026-06-01 14:44:45] Successfully executed: apt install -y hydra
+[2026-06-01 14:44:45] Installing tool: john
+[2026-06-01 14:44:45] Executing command: apt install -y john
+[2026-06-01 14:44:46] Successfully executed: apt install -y john
+[2026-06-01 14:44:46] Installing tool: hashcat
+[2026-06-01 14:44:46] Executing command: apt install -y hashcat
+[2026-06-01 14:44:46] Successfully executed: apt install -y hashcat
+[2026-06-01 14:44:46] Installing tool: metasploit-framework
+[2026-06-01 14:44:46] Executing command: curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > tools/msfinstall && chmod 755 tools/msfinstall && ./tools/msfinstall
+[2026-06-01 14:44:49] Successfully executed: curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > tools/msfinstall && chmod 755 tools/msfinstall && ./tools/msfinstall
+[2026-06-01 14:44:49] Installing tool: burpsuite
+[2026-06-01 14:44:49] Executing command: apt install -y burpsuite
+[2026-06-01 14:44:49] Successfully executed: apt install -y burpsuite
+[2026-06-01 14:44:49] Installing tool: owasp-zap
+[2026-06-01 14:44:49] Executing command: sudo wget -O tools/zap.sh https://github.com/zaproxy/zaproxy/releases/download/v2.17.0/ZAP_2_17_0_unix.sh && sudo chmod 777 tools/zap.sh && sudo ./tools/zap.sh
+[2026-06-01 14:44:55] FAILED to execute: sudo wget -O tools/zap.sh https://github.com/zaproxy/zaproxy/releases/download/v2.17.0/ZAP_2_17_0_unix.sh && sudo chmod 777 tools/zap.sh && sudo ./tools/zap.sh
+[2026-06-01 14:44:55] Installing tool: aircrack-ng
+[2026-06-01 14:44:55] Executing command: apt install -y aircrack-ng
+[2026-06-01 14:44:55] Successfully executed: apt install -y aircrack-ng
+[2026-06-01 14:44:55] Installing tool: ettercap
+[2026-06-01 14:44:55] Executing command: apt install -y ettercap-graphical
+[2026-06-01 14:44:56] Successfully executed: apt install -y ettercap-graphical
+[2026-06-01 14:44:56] Installing tool: netcat
+[2026-06-01 14:44:56] Executing command: apt install -y netcat
+[2026-06-01 14:44:56] FAILED to execute: apt install -y netcat
+[2026-06-01 14:44:56] Installing tool: seclists
+[2026-06-01 14:44:56] Executing command: git clone https://github.com/danielmiessler/SecLists.git tools/SecLists
