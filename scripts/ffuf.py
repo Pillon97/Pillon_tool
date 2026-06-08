@@ -19,6 +19,8 @@ def run_ffuf():
     dirs = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
     if not dirs:
         print("No machine directories found.")
+        print("Please create a new machine directory first.")
+        make_machine.make_machine()
         return
     else: 
         for i, d in enumerate(dirs):
