@@ -117,6 +117,10 @@
         {
             "name": "byobu",
             "install": "apt install -y byobu"
+        },
+        {
+            "name": "fastfetch",
+            "install": "apt install -y fastfetch"
         }
     ],
     "installed": false,
