@@ -177,7 +177,7 @@ if __name__ == "__main__":
         folders()
         installed()
         subprocess.run("export USER=$(pwd | awk -F '/' '{print $3}')", shell=True, check=True)
-        subprocess.run("sudo chown -R $USER:$USER $HOME/*", shell=True, check=True)
+        subprocess.run("sudo chown -R $USER:$USER /home/$USER/*", shell=True, check=True)
         subprocess.run("cp default/.bashrc $HOME/.bashrc", shell=True, check=True)
         log_install("First-time setup completed successfully.")
         start()
