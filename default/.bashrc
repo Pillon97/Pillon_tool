@@ -158,7 +158,7 @@ alias delfiles='find . -maxdepth 1 -type f -delete'
 # Fontos: PILLON-t ELŐBB kell exportálni, mert a COMMON rá hivatkozik
 # ──────────────────────────────────────────────────────────
 export PILLON="$HOME/Pillon_tool"
-export COMMON="$PILLON/tools/SecLists/Discovery/Web-Content/common.txt"
+export COMMON="/usr/share/wordlists/seclists/Discovery/Web-Content/common.txt"
 alias pil='cd $PILLON'
 
 # ──────────────────────────────────────────────────────────
